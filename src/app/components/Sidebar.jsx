@@ -63,7 +63,7 @@ export default function Sidebar({ setSelectedTheme }) {
       {/* Mood Selector */}
       <h3 style={styles.sectionTitle}>Mood Selector</h3>
       <div style={styles.emojiContainer}>
-        <span onClick={() => setSelectedTheme('#1e1e1e')} style={styles.emoji}>😴</span> {/* Calm */}
+        <span onClick={() => setSelectedTheme('#1e1e1e')} style={styles.emoji}>😃</span> {/* Calm */}
         <span onClick={() => setSelectedTheme('#ffadad')} style={styles.emoji}>😊</span> {/* Happy */}
         <span onClick={() => setSelectedTheme('#ffd6a5')} style={styles.emoji}>🔥</span> {/* Energetic */}
         <span onClick={() => setSelectedTheme('#caffbf')} style={styles.emoji}>🙂‍↔️</span> {/* Relaxed */}
