@@ -31,12 +31,6 @@ export default function PlayerPage() {
     return (
         <div style={styles.container}>
 
-        {/* <video autoPlay loop muted playsInline style={styles.backgroundVideo}>
-            
-            <source src="/backgrounds/vecteezy_sound-equalizer-digital-music-or-sound-wave-footage_4450598.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video> */}
-
         <div style={styles.content}>
             <img
             src={song.album_image}
@@ -87,15 +81,15 @@ export default function PlayerPage() {
         justifyContent: 'center',
         alignItems: 'center',
     },
-    backgroundVideo: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        zIndex: 0,
-    },
+    // backgroundVideo: {
+    //     position: 'absolute',
+    //     top: 0,
+    //     left: 0,
+    //     width: '100%',
+    //     height: '100%',
+    //     objectFit: 'cover',
+    //     zIndex: 0,
+    // },
     content: {
         position: 'relative',
         zIndex: 1,
