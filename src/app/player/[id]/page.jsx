@@ -30,8 +30,9 @@ export default function PlayerPage() {
 
     return (
         <div style={styles.container}>
-            
+
         <video autoPlay loop muted playsInline style={styles.backgroundVideo}>
+            
             <source src="/backgrounds/vecteezy_sound-equalizer-digital-music-or-sound-wave-footage_4450598.mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
