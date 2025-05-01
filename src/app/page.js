@@ -1,4 +1,3 @@
-// File: app/page.js
 'use client';
 
 import { useState } from 'react';
@@ -13,7 +12,7 @@ export default function Dashboard() {
   const [selectedTheme, setSelectedTheme] = useState(themes[0].background);
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: selectedTheme }}>
+    <div style={{ display: 'flex', minHeight: '100vh', background: selectedTheme}}>
       <Sidebar setSelectedTheme={setSelectedTheme} />
       <div style={{ flex: 1, padding: '1rem' }}>
         <SearchBar query={query} setQuery={setQuery} setSongs={setSongs} />

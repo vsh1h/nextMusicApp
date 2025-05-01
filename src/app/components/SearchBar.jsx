@@ -1,5 +1,4 @@
-// File: app/components/SearchBar.jsx
-import { useState } from 'react';
+// import { useState } from 'react';
 
 export default function SearchBar({ query, setQuery, setSongs }) {
   const handleSearch = async () => {

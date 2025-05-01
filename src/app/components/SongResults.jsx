@@ -1,11 +1,68 @@
 import { useRouter } from 'next/navigation';
 
 export default function SongResults({ songs }) {
-  const router = useRouter();
+    const router = useRouter();
 
-  return (
+    const styles = {
+        container: {
+            padding: '1rem',
+            maxWidth: '1200px',
+            margin: '0 auto',
+            color: '#fff',
+        },
+        header: {
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            marginBottom: '1.5rem',
+            color: 'red',
+            textShadow: '0 0 10px white, 0 0 10px rgb(255, 255, 255)',
+        },
+        songList: {
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '1.5rem', 
+            justifyContent: 'space-between',
+        },
+        songCard: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            backgroundColor: '#1f1f1f',
+            padding: '1rem',
+            borderRadius: '12px',
+            cursor: 'pointer',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+            transition: '0.3s ease',
+            width: '200px', 
+            textAlign: 'center', 
+        },
+        albumImage: {
+            borderRadius: '8px',
+            objectFit: 'cover',
+            transition: '0.3s ease',
+        },
+        songDetails: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center', 
+            marginTop: '1rem',
+        },
+        songName: {
+            fontSize: '1.1rem',
+            fontWeight: 'bold',
+            color: '#fff',
+            marginBottom: '0.5rem', 
+        },
+        artistName: {
+            fontSize: '1rem',
+            color: '#ccc',
+        },
+        
+    };
+  
+    return (
     <div style={styles.container}>
-      <h3 style={styles.header}>Related Songs</h3>
+      <h2 style={styles.header}><strong>Related Songs</strong></h2>
       <div style={styles.songList}>
         {songs.map((song) => (
           <div
@@ -30,59 +87,3 @@ export default function SongResults({ songs }) {
   );
 }
 
-// Styles for systematic and aesthetic design
-const styles = {
-  container: {
-    padding: '1rem',
-    maxWidth: '1200px', // Maximum width for the container
-    margin: '0 auto',
-    color: '#fff',
-  },
-  header: {
-    fontSize: '1.8rem',
-    fontWeight: 'bold',
-    marginBottom: '1.5rem',
-    color: 'red',
-  },
-  songList: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '1.5rem', // Space between cards
-    justifyContent: 'space-between',
-  },
-  songCard: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    backgroundColor: '#1f1f1f',
-    padding: '1rem',
-    borderRadius: '12px',
-    cursor: 'pointer',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-    transition: '0.3s ease',
-    width: '200px', // Set a fixed width for each card
-    textAlign: 'center', // Center the text inside the card
-  },
-  albumImage: {
-    borderRadius: '8px',
-    objectFit: 'cover',
-    transition: '0.3s ease',
-  },
-songDetails: {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center', // Optional: center-align text
-  marginTop: '1rem',
-},
-songName: {
-  fontSize: '1.1rem',
-  fontWeight: 'bold',
-  color: '#fff',
-  marginBottom: '0.5rem', // adds space below the song name
-},
-artistName: {
-  fontSize: '1rem',
-  color: '#ccc',
-},
-
-};

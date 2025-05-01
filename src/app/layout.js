@@ -1,4 +1,3 @@
-// File: app/layout.js
 import AudioPlayer from './components/AudioPlayer';
 
 export default function RootLayout({ children }) {
@@ -6,7 +5,7 @@ export default function RootLayout({ children }) {
     <html>
       <head />
       <body>
-        <AudioPlayer />  {/* Global AudioPlayer to play music */}
+        <AudioPlayer />
         {children}
       </body>
     </html>
